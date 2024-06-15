@@ -3,6 +3,8 @@
 Desenvolver o conceito de um jogo de cartas utilizando a Unity. O objetivo é implementar o jogo
 utilizando conceitos de herança em C#. O jogo terá as seguintes classes:
 
+Git do projeto: https://github.com/42i-ai/unity-cardgame
+
 ## Classe Card (Carta): 
 
 Essa classe será a classe base para todas as cartas do jogo.
@@ -47,67 +49,61 @@ possui e pode levar para batalha.
 Exemplo: se a coleção tiver 7 cartas de valor 1 e 3 cartas de valor 2, o método deve retornar
 13.
 
-# Rules
+## Regras do Jogo próxima versão
 
-Creating a Proof of Concept (POC) with a simplified version of the game using only five cards for each player can help you test the core mechanics. Here are the rules for this simplified version:
+### Regras do Jogo de Cartas da Sociedade do Anel vs. Exército de Sauron
 
-### Components
-- Each player has 1 hero card and a mini-deck of 4 cards (a mix of action, item, and skill cards).
+#### Objetivos
 
-### Setup
-1. Each player selects or is assigned a hero card with predefined abilities and HP.
-2. Each player is dealt a mini-deck of 4 cards.
-3. Players draw all 4 cards to form their starting hand.
+- **Jogador da Sociedade do Anel**: Destruir o One Ring.
+- **Jogador do Exército de Sauron**: Matar Frodo Baggins.
 
-### Turn Structure
-1. **Draw Phase**: There is no draw phase since each player starts with all their cards in hand.
-2. **Action Phase**: Players take turns performing actions using the cards in their hand. Each action costs Action Points (AP). Players have 2 AP per turn. Actions include:
-   - **Attack**: Use an action card to deal damage to the opponent's hero.
-   - **Defend**: Use an action card to reduce incoming damage.
-   - **Use Item**: Use an item card to equip weapons/armor or consume potions.
-   - **Activate Skill**: Use a skill card to perform a special ability (healing, buffing, debuffing, etc.).
-3. **End Phase**: The player ends their turn, and the next player begins their turn.
+#### Configuração Inicial
 
-### Winning the Game
-- The goal is to reduce the opponent's hero's HP to 0.
+1. **Baralho**: Cada jogador começa com um baralho de 10 cartas. O baralho deve ser embaralhado antes do início do jogo.
+2. **Mão Inicial**: Cada jogador compra 5 cartas do topo do seu baralho para formar sua mão inicial.
+3. **Turnos**: Decida aleatoriamente qual jogador começa.
 
-### Example Cards
-1. **Hero Card**: "Warrior"
-   - HP: 10
-   - Ability: "Battle Cry" (Once per game, double the damage of an attack card for one turn)
+#### Turnos
 
-2. **Action Card**: "Sword Slash"
-   - AP Cost: 1
-   - Damage: 3
+Cada turno consiste nas seguintes fases:
 
-3. **Action Card**: "Shield Block"
-   - AP Cost: 1
-   - Effect: Reduce incoming damage by 3 for one turn
+1. **Compra de Carta**: No início de cada turno, o jogador compra uma carta do topo do seu baralho, se tiver menos de 5 cartas na mão.
+2. **Fase de Invocação**: O jogador pode usar ouro (custo das cartas) para invocar criaturas ou lançar feitiços. Cada jogador começa com 5 de ouro e ganha 1 de ouro adicional por turno.
+3. **Fase de Combate**: O jogador pode atacar com suas criaturas.
+4. **Fase Final**: O jogador termina o turno, passando a vez para o oponente.
 
-4. **Item Card**: "Healing Potion"
-   - AP Cost: 1
-   - Effect: Restore 3 HP to the hero
+#### Regras de Combate
 
-5. **Skill Card**: "Quick Strike"
-   - AP Cost: 2
-   - Damage: 5
+1. **Ataque**: Durante a fase de combate, o jogador pode escolher quais criaturas irão atacar.
+2. **Defesa**: O jogador defensor pode escolher quais criaturas irão defender.
+3. **Dano**: O dano de ataque é subtraído da vida das criaturas defensoras. Se uma criatura receber dano igual ou superior à sua vida, ela é destruída e removida do campo de batalha.
+4. **Ataque Direto**: Se uma criatura atacante não for bloqueada, ela pode atacar diretamente o jogador ou um objetivo específico (Frodo ou o One Ring).
 
-### Example Turn
-1. Player 1's Turn:
-   - Uses "Sword Slash" (costs 1 AP) to deal 3 damage to Player 2's hero.
-   - Uses "Healing Potion" (costs 1 AP) to restore 3 HP to their hero.
-   - Ends turn.
+#### Condições de Vitória
 
-2. Player 2's Turn:
-   - Uses "Quick Strike" (costs 2 AP) to deal 5 damage to Player 1's hero.
-   - Ends turn.
+- **Jogador do Exército de Sauron**: Vence se conseguir reduzir a vida de Frodo a 0.
+- **Jogador da Sociedade do Anel**: Vence se conseguir destruir o One Ring usando a carta de feitiço "Flames of Mount Doom" ou qualquer outra condição de destruição específica para o One Ring.
 
-### Simplified Mechanics
-- **No Deck Building**: Players use pre-selected cards to simplify testing.
-- **Single Use Cards**: Each card can be used only once for the POC.
-- **Limited Turns**: Set a maximum number of turns (e.g., 5 turns each) to ensure the game concludes quickly.
+#### Regras Especiais
 
-This simplified version of the game allows you to test the core mechanics, balance the card effects, and gather feedback before expanding to a full deck and more complex rules.
+1. **Frodo Baggins**: Frodo é uma carta especial e não pode ser atacado diretamente a menos que todas as outras criaturas do jogador da Sociedade do Anel estejam destruídas.
+2. **One Ring**: O One Ring pode ser destruído apenas por cartas ou efeitos específicos, como "Flames of Mount Doom".
+
+#### Invocação e Lançamento de Feitiços
+
+- O jogador pode invocar criaturas ou lançar feitiços durante sua fase de invocação, desde que tenha ouro suficiente.
+- Cada jogador começa com 5 de ouro e ganha 1 de ouro adicional por turno.
+
+#### Limite de Mão
+
+- Cada jogador pode ter no máximo 7 cartas na mão. Se um jogador tiver mais de 7 cartas, deve descartar até ter 7.
+
+#### Efeitos de Cartas
+
+- Alguns feitiços e habilidades de criaturas têm efeitos que podem alterar o curso do jogo. Estes são resolvidos imediatamente quando a carta é jogada.
+
+
 
 # Referencias
 
