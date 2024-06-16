@@ -123,6 +123,233 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &135480109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 135480110}
+  - component: {fileID: 135480114}
+  - component: {fileID: 135480115}
+  - component: {fileID: 135480113}
+  - component: {fileID: 135480112}
+  m_Layer: 5
+  m_Name: ButtonFellowShipCardDeck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &135480110
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135480109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 149155033}
+  m_Father: {fileID: 1410244880}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.55342424, y: 0.5}
+  m_AnchoredPosition: {x: -311, y: 4}
+  m_SizeDelta: {x: 116, y: 30}
+  m_Pivot: {x: 0.49999994, y: 0.5}
+--- !u!114 &135480112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135480109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 135480113}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 135480115}
+        m_TargetAssemblyTypeName: DrawFellowshipHand, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &135480113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135480109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &135480114
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135480109}
+  m_CullTransparentMesh: 1
+--- !u!114 &135480115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135480109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91df763a061d41e99f11e18a0ec353d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &149155032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 149155033}
+  - component: {fileID: 149155035}
+  - component: {fileID: 149155034}
+  m_Layer: 5
+  m_Name: FellowShipCardDeck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &149155033
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149155032}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 135480110}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &149155034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149155032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Fellowship Card Deck
+--- !u!222 &149155035
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149155032}
+  m_CullTransparentMesh: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +434,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &606274812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9088169168504790017, guid: 1a0c3b90c70b54e7eb16f639f9b989e6, type: 3}
+  m_PrefabInstance: {fileID: 9088169168313097397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &709814795 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1982694488824775537, guid: 9b2b3ad37eb1b4bcc914d9f7a149e6a2, type: 3}
@@ -228,9 +460,10 @@ GameObject:
   - component: {fileID: 939288819}
   - component: {fileID: 939288822}
   - component: {fileID: 939288821}
+  - component: {fileID: 939288823}
   - component: {fileID: 939288820}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonSauronCardDeck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -300,7 +533,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 939288821}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 939288823}
+        m_TargetAssemblyTypeName: DrawHand, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &939288821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,6 +584,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939288818}
   m_CullTransparentMesh: 1
+--- !u!114 &939288823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939288818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e74829c63e1499aada0e4f445690ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1410244876
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1410244880}
   - component: {fileID: 1410244879}
+  - component: {fileID: 1410244882}
   - component: {fileID: 1410244878}
   - component: {fileID: 1410244877}
   - component: {fileID: 1410244881}
@@ -437,6 +695,7 @@ RectTransform:
   - {fileID: 1789763241}
   - {fileID: 882311349}
   - {fileID: 939288819}
+  - {fileID: 135480110}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -488,13 +747,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1410244882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410244876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e74829c63e1499aada0e4f445690ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1573831192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1982694488824775536, guid: 9b2b3ad37eb1b4bcc914d9f7a149e6a2, type: 3}
   m_PrefabInstance: {fileID: 1982694489533737338}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1573831193
+--- !u!114 &1573831196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -506,8 +789,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0135c60be1a84acca74dda9ea303742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SauronArea: {fileID: 0}
-  RingSocietyArea: {fileID: 0}
+  SauronArea: {fileID: 606274812}
+  FellowshipArea: {fileID: 1603191784}
+  ButtonSauronCardDeck: {fileID: 0}
+  ButtonFellowshipCardDeck: {fileID: 0}
+--- !u!1 &1603191784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3229889690469718156, guid: 9d3d8cfa5afbf4a0c9d3202f169fc3ed, type: 3}
+  m_PrefabInstance: {fileID: 3229889692254684708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1789763241 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3229889690469718157, guid: 9d3d8cfa5afbf4a0c9d3202f169fc3ed, type: 3}
@@ -525,7 +815,7 @@ GameObject:
   - component: {fileID: 1888624967}
   - component: {fileID: 1888624966}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SauronCardDeck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -584,7 +874,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Create Card
+  m_Text: Sauron Card Deck
 --- !u!222 &1888624967
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -767,7 +1057,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3229889690469718156, guid: 9d3d8cfa5afbf4a0c9d3202f169fc3ed, type: 3}
       propertyPath: m_Name
-      value: OponnentArea
+      value: FellowshipArea
       objectReference: {fileID: 0}
     - target: {fileID: 3229889690469718157, guid: 9d3d8cfa5afbf4a0c9d3202f169fc3ed, type: 3}
       propertyPath: m_Pivot.x
@@ -854,16 +1144,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3229889690469718158, guid: 9d3d8cfa5afbf4a0c9d3202f169fc3ed, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f7734d3a3098e4ccaa7c3c41f0514aa7, type: 3}
+    - target: {fileID: 3229889690469718158, guid: 9d3d8cfa5afbf4a0c9d3202f169fc3ed, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3229889690469718158, guid: 9d3d8cfa5afbf4a0c9d3202f169fc3ed, type: 3}
       propertyPath: m_Color.b
-      value: 0.86227393
+      value: 0.03529412
       objectReference: {fileID: 0}
     - target: {fileID: 3229889690469718158, guid: 9d3d8cfa5afbf4a0c9d3202f169fc3ed, type: 3}
       propertyPath: m_Color.g
-      value: 0.16834284
+      value: 0.75294125
       objectReference: {fileID: 0}
     - target: {fileID: 3229889690469718158, guid: 9d3d8cfa5afbf4a0c9d3202f169fc3ed, type: 3}
       propertyPath: m_Color.r
-      value: 0.9150943
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d3d8cfa5afbf4a0c9d3202f169fc3ed, type: 3}
@@ -960,8 +1258,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9088169168504790017, guid: 1a0c3b90c70b54e7eb16f639f9b989e6, type: 3}
       propertyPath: m_Name
-      value: PlayerArea
+      value: SauroArea
       objectReference: {fileID: 0}
+    - target: {fileID: 9088169168504790019, guid: 1a0c3b90c70b54e7eb16f639f9b989e6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eab9d89a36b374fa3a3b801317198906, type: 3}
     - target: {fileID: 9088169168504790019, guid: 1a0c3b90c70b54e7eb16f639f9b989e6, type: 3}
       propertyPath: m_Color.b
       value: 0.11614456

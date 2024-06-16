@@ -1,39 +1,61 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class BaseCardDeck
 {
-    private List<BaseCard> cards;
+    [SerializeField]
+    public List<BaseCard> Cards { get; private set; }
 
     public BaseCardDeck()
     {
-        cards = new List<BaseCard>();
+        Cards = new List<BaseCard>();
     }
 
     public virtual bool AddCard(BaseCard card)
     {
-        cards.Add(card);
+        Cards.Add(card);
         UnityEngine.Debug.Log($"Card added to the deck: {card.CardName}");
         return true;
     }
 
-    public void RemoveCard(BaseCard card)
+    public void RemoveTopCard()
     {
-        cards.Remove(card);
+        if (Cards.Count > 0)
+        {
+            BaseCard card = Cards[0];
+            UnityEngine.Debug.Log($"Card removed from the deck: {card.CardName}");
+            Cards.RemoveAt(0);
+        }
+
+    }
+
+    public BaseCard GetTopCard()
+    {
+        UnityEngine.Debug.Log($"Getting the top card... {Cards.Count} cards in the deck.");
+        if (Cards.Count == 0)
+        {
+            UnityEngine.Debug.Log($"No cards in the deck!");
+            return null;
+        }
+
+        BaseCard card = Cards[0];
+        UnityEngine.Debug.Log($"This is my top card: {card.CardName}");
+        return card;
     }
 
     public void CardShuffle()
     {
-        Random rnd = new Random();
-        int n = cards.Count;
+        System.Random rnd = new System.Random();
+        int n = Cards.Count;
         while (n > 1)
         {
             n--;
             int k = rnd.Next(n + 1);
-            BaseCard value = cards[k];
-            cards[k] = cards[n];
-            cards[n] = value;
+            BaseCard value = Cards[k];
+            Cards[k] = Cards[n];
+            Cards[n] = value;
         }
     }
 

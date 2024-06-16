@@ -12,7 +12,7 @@ public class CardDeck : BaseCardDeck
     {
         int legendaryCount = 0;
 
-        foreach (CreatureCard card in Cards)
+        foreach (BaseCard card in Cards)
         {
             if (card.Rarity == CardRarity.Legendary)
             {
@@ -26,7 +26,7 @@ public class CardDeck : BaseCardDeck
     {
         int rareCount = 0;
 
-        foreach (CreatureCard card in Cards)
+        foreach (BaseCard card in Cards)
         {
             if (card.Rarity == CardRarity.Rare)
             {
@@ -46,17 +46,22 @@ public class CardDeck : BaseCardDeck
     public new bool AddCard(BaseCard card)
     {
 
+
         if (Cards.Count < MaxCards)
         {
             if (card is CreatureCard)
             {
                 CreatureCard creature = card as CreatureCard;
-
                 if (creature.Rarity == CardRarity.Legendary && CountLengendaries() < MaxLegendaries)
                 {
                     Cards.Add(creature);
                     UnityEngine.Debug.Log($"Added Legendary creature: {creature.CardName} to your deck! The deck has total power of {CalculateTotalValue()} ");
                     return true;
+                }
+                else if (creature.Rarity == CardRarity.Legendary && CountLengendaries() >= MaxLegendaries)
+                {
+                    UnityEngine.Debug.Log("You can only have 2 Legendary cards in your deck");
+                    return false;
                 }
                 else if (creature.Rarity == CardRarity.Rare && CountRares() < MaxRares)
                 {
@@ -64,12 +69,24 @@ public class CardDeck : BaseCardDeck
                     UnityEngine.Debug.Log($"Added Rare creature: {creature.CardName} to your deck! The deck has total power of {CalculateTotalValue()} ");
                     return true;
                 }
+                else if (creature.Rarity == CardRarity.Rare && CountRares() >= MaxRares)
+                {
+                    UnityEngine.Debug.Log("You can only have 1 Rare card in your deck");
+                    return false;
+                }
                 else if (creature.Rarity == CardRarity.Normal)
                 {
                     Cards.Add(creature);
                     UnityEngine.Debug.Log($"Added creature: {creature.CardName} to your deck! The deck has total power of {CalculateTotalValue()} ");
                     return true;
                 }
+            }
+            else if (card is SpellCard)
+            {
+                SpellCard spell = card as SpellCard;
+                Cards.Add(spell);
+                UnityEngine.Debug.Log($"Added spell: {spell.CardName} to your deck! The deck has total power of {CalculateTotalValue()} ");
+                return true;
             }
         }
         else

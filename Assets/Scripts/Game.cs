@@ -1,22 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Game : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject SauronArea;
-    public GameObject RingSocietyArea;
-
-    private CardDeck cardDeck;
+    public GameObject FellowshipArea;
 
     private BaseCardDeck sauronDeck;
-
     private BaseCardDeck fellowshipDeck;
 
-    private CardDeck sauronHand;
+    public GameObject ButtonSauronCardDeck;
 
-    private CardDeck fellowshipHand;
+    public GameObject ButtonFellowshipCardDeck;
+
+
+    private DrawFellowshipHand fellowshipHand;
+
+    private DrawSauronHand sauronHand;
 
     void Start()
     {
@@ -83,7 +86,24 @@ public class Game : MonoBehaviour
 
         fellowshipDeck.CardShuffle();
 
+
+        fellowshipHand = ButtonFellowshipCardDeck.GetComponent<DrawFellowshipHand>();
+        if (fellowshipHand != null)
+        {
+            fellowshipHand.FellowshipDeck = fellowshipDeck;
+        }
+
+        sauronHand = ButtonSauronCardDeck.GetComponent<DrawSauronHand>();
+        if (sauronHand != null)
+        {
+            sauronHand.SauronDeck = sauronDeck;
+        }
+
+
+
+
     }
+
 
     // Update is called once per frame
     void Update()
