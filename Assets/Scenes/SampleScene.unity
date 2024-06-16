@@ -489,6 +489,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1573831192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1982694488824775536, guid: 9b2b3ad37eb1b4bcc914d9f7a149e6a2, type: 3}
+  m_PrefabInstance: {fileID: 1982694489533737338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1573831193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573831192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0135c60be1a84acca74dda9ea303742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SauronArea: {fileID: 0}
+  RingSocietyArea: {fileID: 0}
 --- !u!224 &1789763241 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3229889690469718157, guid: 9d3d8cfa5afbf4a0c9d3202f169fc3ed, type: 3}

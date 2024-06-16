@@ -11,6 +11,7 @@ public class SpellCard : BaseCard
       - A burned user will take damage over time.
     */
     Effect = effect;
+    UnityEngine.Debug.Log($"Spell created: {cardName} spell effect {effect} ");
   }
 
 }

@@ -20,6 +20,8 @@ public class Game : MonoBehaviour
 
     void Start()
     {
+        UnityEngine.Debug.Log("Game started");
+
         sauronDeck = new BaseCardDeck();
         sauronDeck.AddCard(new CreatureCard("Sauron", 8, CardRarity.Legendary, 10, 10));
         sauronDeck.AddCard(new CreatureCard("Witch-king of Angmar", 6, CardRarity.Legendary, 7, 7));
